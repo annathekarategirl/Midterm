@@ -17,30 +17,54 @@ function getCharacterJPG(characterName)
             return "specialweek.jpg"
     }
 }
+var data=""
 async function main(string) {
-    const data = await fetchJSONData(string);
+    data = await fetchJSONData(string);
     //return Object.keys(data['dialog'][dialogNum])
     //console.log(data);
     //console.log(Object.keys(data['dialog'][dialogNum]));
     return data
 }
 
-//main('./ofcourse.json');
+// main('./ofcourse.json');
+// console.log(data)
 const start =document.getElementById("start")
 start.addEventListener("click", story)
 
-const beginning=main("./beginning.json")
-console.log(beginning)
+//https://www.w3schools.com/jsref/jsref_promise_then.asp
+
+//
+
+// const test= main('./ofcourse.json').then(fetchedData => {
+//     data = fetchedData
+//     console.log("Outside function via then:", data)
+// })
+// console.log("H",data)
+// console.log(test)
+//console.log("j",fetchedData)
+// const beginning=await main("./beginning.json")
+// console.log(beginning)
+
+
+
 function begin(){
 
 }
 
 
+let dialogtxt
+let nametxt
+let imgtxt
 
 
 
-
-function story(){
+async function story(){
 //call all functions here for the seamless story
 console.log("WOW!!!!!!!!")
+dialogtxt = await main("./beginning.json");
+
 }
+
+// console.log(currentScene)
+
+    
