@@ -91,7 +91,8 @@ imgtxt=actualdialogtxt.display_image
 // console.log(currentScene)
 async function story(){
 //call all functions here for the seamless story
-begin("./beginning.json")
-choice("./beginning.json")
+await begin("./beginning.json")
+dialogNum=0
+await choice("./beginning.json")
 }
     
