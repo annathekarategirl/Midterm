@@ -19,6 +19,7 @@ function getCharacterJPG(characterName)
 }
 async function main(string) {
     const data = await fetchJSONData(string);
+    return Object.keys(data['dialog'][dialogNum])
     //console.log(data);
     //console.log(Object.keys(data['dialog'][dialogNum]));
 }
