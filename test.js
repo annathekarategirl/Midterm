@@ -65,13 +65,15 @@ await access(jsonfile)
 textpara.textContent=waitnoactualactualdialogtxt
 namepara.textContent=nametxt
 storyimg.src=imgtxt
-dialogNum++
-
+ if(dialogNum < dialogtxt.dialog.length - 1){
+        dialogNum++;
+    } else {
+        showChoices();
+    }c
+async function choice(jsonfile){
+    await access(jsonfile)
+    console.log(nametxt)
 }
-// async function choice(jsonfile){
-//     await access(jsonfile)
-//     //console.log(nametxt)
-// }
 
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
@@ -79,10 +81,24 @@ dialogNum++
 async function access(jsonfile){
 
 dialogtxt = await main(jsonfile);
+
+console.log("dialogNum:", dialogNum);
+    console.log("dialog length:", dialogtxt.dialog.length);
+    console.log("actualdialogtxt:", dialogtxt.dialog[dialogNum]);
+
+
 actualdialogtxt=dialogtxt.dialog[dialogNum]
+
+if(!actualdialogtxt){
+        console.log("out of bounds, stopping");
+        return;}
+
+
+
 nametxt = Object.keys(actualdialogtxt).find(key => key !== "display_image");
 waitnoactualactualdialogtxt=actualdialogtxt[nametxt]
 imgtxt=actualdialogtxt.display_image
+
 
 //console.log(Object.keys(dialogtxt['dialog'][dialogNum]))
 }
@@ -95,4 +111,3 @@ await begin("./beginning.json")
 
 // await choice("./beginning.json")
 }
-    
