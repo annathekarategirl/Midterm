@@ -69,8 +69,8 @@ dialogNum++
 
 }
 async function choice(jsonfile){
-    text
-    
+    await access(jsonfile)
+    console.log(nametxt)
 }
 
 
@@ -89,9 +89,9 @@ imgtxt=actualdialogtxt.display_image
 
 
 // console.log(currentScene)
-function story(){
+async function story(){
 //call all functions here for the seamless story
 begin("./beginning.json")
-choice()
+choice("./beginning.json")
 }
     
