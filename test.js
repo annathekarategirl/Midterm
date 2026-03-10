@@ -68,14 +68,15 @@ storyimg.src=imgtxt
  if(dialogNum < dialogtxt.dialog.length - 1){
         dialogNum++;
     } else {
-        showChoices();
-    }c
+        choice("./beginning.json");
+    }
+}
+
+
 async function choice(jsonfile){
     await access(jsonfile)
     console.log(nametxt)
 }
-
-
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 
 async function access(jsonfile){
