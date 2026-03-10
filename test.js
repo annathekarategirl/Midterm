@@ -14,6 +14,9 @@ let nametxt
 let imgtxt
 let actualdialogtxt;
 let waitnoactualactualdialogtxt;
+const textpara= document.getElementById("textdisplay")
+const namepara=document.getElementById("namedisplay")
+const umapara=document.getElementById("uma")
 
 
 function getCharacterJPG(characterName)
@@ -55,8 +58,8 @@ start.addEventListener("click", story)
 
 async function begin(){
 await access("./beginning.json")
-const textpara= document.getElementById("textdisplay")
 textpara.textContent=waitnoactualactualdialogtxt
+
 }
 
 
