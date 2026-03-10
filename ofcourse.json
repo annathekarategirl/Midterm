@@ -1,0 +1,34 @@
+{
+  "dialog": [
+    {
+      "display_image": "specialweek.jpg",
+      "Special Week": "Of course!"
+    },
+    {
+      "Narration": "She sat down next to me. With Beatrice on one side and Kat on the other, I was surrounded by a constant aura of beauty. I could tell this was going one heck of a class."
+    },
+    {
+      "Narration": "After class ended, we had all become day 1 best friends."
+    },
+    {
+      "display_image": "specialweek.jpg",
+      "Special Week": "Where are we going for lunch?"
+    },
+    {
+      "display_image": "bea.jpg",
+      "Beatrice": "I’m going to crochet club!"
+    },
+    {
+      "display_image": "kat.jpg",
+      "Kat": "I’m going to Starbucks!"
+    },
+    {
+      "Narration": "Oooh. Looks like you'll have to choose."
+    }
+  ],
+  "choice_scenes": {
+    "kat_lunch.json": "Go with Kat",
+    "bea_lunch.json": "Go with Beatrice",
+    "alone_lunch.json": "Eat lunch alone"
+  }
+}

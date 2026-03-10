@@ -1,0 +1,61 @@
+{
+    "dialog": [
+        {
+            "display_image": "specialweek.jpg",
+            "Special Week": "Today’s my first day at Wake Early College Of Information and Biotechnologies"
+        },
+        {
+            "display_image": "specialweek.jpg",
+            "Special Week": "At this school, I’m going to become the best Uma!"
+        },
+        {
+            "display_image": "specialweek.jpg",
+            "Special Week": "I hope I can make friends here…"
+        },
+        {
+            "display_image": "specialweek.jpg",
+            "Special Week": "Whoops!"
+        },
+        {
+            "Narration": "A beautiful girl bumped into me."
+        },
+        {
+            "display_image": "bea.jpg",
+            "Girl": "Sorry!"
+        },
+        {
+            "Narration": "She helped me up."
+        },
+        {
+            "display_image": "bea.jpg",
+            "Beatrice": "My name is Beatrice, nice to meet you!"
+        },
+        {
+            "display_image": "specialweek.jpg",
+            "Special Week": "I’m Special Week!"
+        },
+        {
+            "display_image": "bea.jpg",
+            "Beatrice": "What’s your first period?"
+        },
+        {
+            "display_image": "specialweek.jpg",
+            "Special Week": "Umm… let me see… Networking Administration Honors!"
+        },
+        {
+            "display_image": "bea.jpg",
+            "Beatrice": "No way, me too!"
+        },
+        {
+            "Narration": "We headed to class and sat next to each other. Another gorgeous girl approached us."
+        },
+        {
+            "display_image": "kat.jpg",
+            "Kat": "Hi, I’m Kat. Can I sit next to you two?"
+        }
+    ],
+    "choice_scenes": {
+        "ofcourse.json": "Of course!",
+        "goaway.json": "Ew. Go away."
+    }
+}
