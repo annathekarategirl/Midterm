@@ -17,7 +17,7 @@ let waitnoactualactualdialogtxt;
 const textpara= document.getElementById("textdisplay")
 const namepara=document.getElementById("namedisplay")
 const umapara=document.getElementById("uma")
-
+const storyimg=document.getElementById("storyimg")
 
 function getCharacterJPG(characterName)
 {
@@ -38,7 +38,11 @@ async function main(string) {
 // main('./ofcourse.json');
 // console.log(data)
 const start =document.getElementById("start")
+const next=document.getElementById("next")
 start.addEventListener("click", story)
+start.addEventListener("click",function(){start.disabled = true;})
+next.addEventListener("click",story)
+
 
 //https://www.w3schools.com/jsref/jsref_promise_then.asp
 
@@ -56,12 +60,18 @@ start.addEventListener("click", story)
 
 
 
-async function begin(){
-await access("./beginning.json")
+async function begin(jsonfile){
+await access(jsonfile)
 textpara.textContent=waitnoactualactualdialogtxt
+namepara.textContent=nametxt
+storyimg.src=imgtxt
+dialogNum++
 
 }
-
+async function choice(jsonfile){
+    text
+    
+}
 
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
@@ -70,13 +80,10 @@ async function access(jsonfile){
 
 dialogtxt = await main(jsonfile);
 actualdialogtxt=dialogtxt.dialog[dialogNum]
-console.log(actualdialogtxt)
 nametxt = Object.keys(actualdialogtxt).find(key => key !== "display_image");
-console.log(nametxt)
 waitnoactualactualdialogtxt=actualdialogtxt[nametxt]
-console.log(waitnoactualactualdialogtxt)
 imgtxt=actualdialogtxt.display_image
-console.log(imgtxt)
+
 //console.log(Object.keys(dialogtxt['dialog'][dialogNum]))
 }
 
@@ -84,6 +91,7 @@ console.log(imgtxt)
 // console.log(currentScene)
 function story(){
 //call all functions here for the seamless story
-begin()
+begin("./beginning.json")
+choice()
 }
     
