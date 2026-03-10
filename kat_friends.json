@@ -1,0 +1,15 @@
+{
+  "dialog": [
+    {
+      "display_image": "specialweek.jpg",
+      "Special Week": "No I'm broke lol sorry."
+    },
+    {
+      "display_image": "kat.jpg",
+      "Kat": "Dang. That's too bad."
+    },
+    {
+      "Narration": "And they lived mediocrely ever after."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "dialog": [
+    {
+      "Narration": "Later at Walmart."
+    },
+    {
+      "display_image": "kat.jpg",
+      "Kat": "Wow, what a productive shopping experience!"
+    },
+    {
+      "display_image": "specialweek.jpg",
+      "Special Week": "Uh huh."
+    },
+    {
+      "display_image": "kat.jpg",
+      "Kat": "Wait I have to make a Walmart account to pay on my phone. So much work…"
+    },
+    {
+      "Narration": "A few moments later."
+    },
+    {
+      "display_image": "kat.jpg",
+      "Kat": "It doesn’t even work! I’m sorry Special Week but could you please pay for this? I’ll get you something tomorrow."
+    }
+  ],
+  "choice_scenes": {
+    "kat_confess.json": "Pay for it and confess your undying love for her",
+    "kat_friends.json": "Don't pay for it and stay acquaintances"
+  }
+}

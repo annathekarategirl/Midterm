@@ -1,0 +1,15 @@
+{
+  "dialog": [
+    {
+      "display_image": "bea.jpg",
+      "Beatrice": "Awesome! Let's crochet then!"
+    },
+    {
+      "Narration": "You pondered for a second, your heart beating ever so fast."
+    }
+  ],
+  "choice_scenes": {
+    "bea_confess.json": "Crochet heart and give it to Beatrice",
+    "bea_no_confess.json": "Crochet a star for yourself"
+  }
+}

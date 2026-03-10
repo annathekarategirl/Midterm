@@ -1,0 +1,14 @@
+{
+  "dialog": [
+    {
+      "Narration": "You pet the orange cat."
+    },
+    {
+      "display_image": "cat.jpg",
+      "Cat": "Orange!!!!!!!!!!!!!!!!!"
+    },
+    {
+      "Narration": "System confused: write your own ending []"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "dialog": [
+    {
+      "Narration": "You go into a classroom to find an orange cat."
+    },
+    {
+      "display_image": "cat.jpg",
+      "Cat": "Meow."
+    },
+    {
+      "Narration": "Pet it?"
+    }
+  ],
+  "choice_scenes": {
+    "pet_cat.json": "Yes",
+    "dont_pet_cat.json": "No"
+  }
+}

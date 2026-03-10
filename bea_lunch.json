@@ -1,0 +1,20 @@
+{
+  "dialog": [
+    {
+      "display_image": "specialweek.jpg",
+      "Special Week": "I'll go with Beatrice."
+    },
+    {
+      "display_image": "bea.jpg",
+      "Beatrice": "Yay!"
+    },
+    {
+      "display_image": "bea.jpg",
+      "Beatrice": "Do you like crocheting?"
+    }
+  ],
+  "choice_scenes": {
+    "nice_bea.json": "Yeah!",
+    "mean_bea.json": "Crocheting is for losers grrrrrr"
+  }
+}

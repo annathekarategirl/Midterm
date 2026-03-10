@@ -1,0 +1,19 @@
+{
+  "dialog": [
+    {
+      "display_image": "bea.jpg",
+      "Beatrice": "Ooh what are you making?"
+    },
+    {
+      "display_image": "specialweek.jpg",
+      "Special Week": "A star."
+    },
+    {
+      "display_image": "bea.jpg",
+      "Beatrice": "Nice."
+    },
+    {
+      "Narration": "And they lived mediocrely ever after."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "dialog": [
+    {
+      "display_image": "specialweek.jpg",
+      "Special Week": "I'll go with Kat."
+    },
+    {
+      "display_image": "kat.jpg",
+      "Kat": "Yay!"
+    },
+    {
+      "Narration": "You and Kat go on an awesome date!"
+    },
+    {
+      "display_image": "kat.jpg",
+      "Kat": "So, what do you plan to do after school?"
+    },
+    {
+      "display_image": "specialweek.jpg",
+      "Special Week": "Not much."
+    },
+    {
+      "display_image": "kat.jpg",
+      "Kat": "Would you want to go to Malwart with me?"
+    }
+  ],
+  "choice_scenes": {
+    "mean_kat.json": "Ew why would I",
+    "nice_kat.json": "Sure!"
+  }
+}

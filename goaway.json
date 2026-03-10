@@ -1,0 +1,27 @@
+{
+  "dialog": [
+    {
+      "display_image": "specialweek.jpg",
+      "Special Week": "Ew. Go away."
+    },
+    {
+      "display_image": "kat.jpg",
+      "Kat": "What did I even do?"
+    },
+    {
+      "display_image": "bea.jpg",
+      "Beatrice": "Yeah, that was so unnecessary."
+    },
+    {
+      "display_image": "kat.jpg",
+      "Kat": "Whatever. I'll go sit somewhere else."
+    },
+    {
+      "display_image": "bea.jpg",
+      "Beatrice": "Yeah, me too."
+    },
+    {
+      "Narration": "BAD END — Learn to interact with women you chud."
+    }
+  ]
+}

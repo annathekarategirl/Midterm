@@ -1,0 +1,23 @@
+{
+  "dialog": [
+    {
+      "display_image": "specialweek.jpg",
+      "Special Week": "Hey… I know it's only been a day but… I think I like you!"
+    },
+    {
+      "display_image": "kat.jpg",
+      "Kat": "Wow we're literally yuri."
+    },
+    {
+      "display_image": "specialweek.jpg",
+      "Special Week": "So… is this a yes?"
+    },
+    {
+      "display_image": "kat.jpg",
+      "Kat": "Yes."
+    },
+    {
+      "Narration": "And they lived happily ever after."
+    }
+  ]
+}

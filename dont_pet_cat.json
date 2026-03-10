@@ -1,0 +1,14 @@
+{
+  "dialog": [
+    {
+      "Narration": "Your urge to pet the cat is too strong."
+    },
+    {
+      "Narration": "Pet the cat?"
+    }
+  ],
+  "choice_scenes": {
+    "pet_cat.json": "Yes",
+    "dont_pet_cat.json": "No"
+  }
+}

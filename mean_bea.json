@@ -1,0 +1,19 @@
+{
+  "dialog": [
+    {
+      "display_image": "bea.jpg",
+      "Beatrice": "Then why bother going to the crochet club with me?"
+    },
+    {
+      "display_image": "specialweek.jpg",
+      "Special Week": "Good question."
+    },
+    {
+      "display_image": "bea.jpg",
+      "Beatrice": "Well have fun somewhere else I guess."
+    },
+    {
+      "Narration": "END: YOU'RE SO BAD AT THIS"
+    }
+  ]
+}
