@@ -9,6 +9,12 @@ async function fetchJSONData(path) {
     return data;
 }
 let dialogNum = 0;
+let dialogtxt
+let nametxt
+let imgtxt
+let actualdialogtxt;
+let waitnoactualactualdialogtxt;
+
 
 function getCharacterJPG(characterName)
 {
@@ -47,24 +53,34 @@ start.addEventListener("click", story)
 
 
 
-function begin(){
-
+async function begin(){
+await access("./beginning.json")
+const textpara= document.getElementById("textdisplay")
+textpara.textContent=waitnoactualactualdialogtxt
 }
 
 
-let dialogtxt
-let nametxt
-let imgtxt
 
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 
+async function access(jsonfile){
 
-async function story(){
-//call all functions here for the seamless story
-console.log("WOW!!!!!!!!")
-dialogtxt = await main("./beginning.json");
-
+dialogtxt = await main(jsonfile);
+actualdialogtxt=dialogtxt.dialog[dialogNum]
+console.log(actualdialogtxt)
+nametxt = Object.keys(actualdialogtxt).find(key => key !== "display_image");
+console.log(nametxt)
+waitnoactualactualdialogtxt=actualdialogtxt[nametxt]
+console.log(waitnoactualactualdialogtxt)
+imgtxt=actualdialogtxt.display_image
+console.log(imgtxt)
+//console.log(Object.keys(dialogtxt['dialog'][dialogNum]))
 }
+
 
 // console.log(currentScene)
-
+function story(){
+//call all functions here for the seamless story
+begin()
+}
     
