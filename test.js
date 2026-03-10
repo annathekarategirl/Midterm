@@ -17,10 +17,10 @@ function getCharacterJPG(characterName)
             return "specialweek.jpg"
     }
 }
-async function main() {
-    const data = await fetchJSONData('./beginning.json');
+async function main(string) {
+    const data = await fetchJSONData(string);
     console.log(data);
     console.log(Object.keys(data['dialog'][dialogNum]));
 }
 
-main();
+//main('./ofcourse.json');
