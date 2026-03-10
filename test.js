@@ -68,10 +68,10 @@ storyimg.src=imgtxt
 dialogNum++
 
 }
-async function choice(jsonfile){
-    await access(jsonfile)
-    console.log(nametxt)
-}
+// async function choice(jsonfile){
+//     await access(jsonfile)
+//     //console.log(nametxt)
+// }
 
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
@@ -92,7 +92,7 @@ imgtxt=actualdialogtxt.display_image
 async function story(){
 //call all functions here for the seamless story
 await begin("./beginning.json")
-dialogNum=0
-await choice("./beginning.json")
+
+// await choice("./beginning.json")
 }
     
