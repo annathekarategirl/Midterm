@@ -24,3 +24,10 @@ async function main(string) {
 }
 
 //main('./ofcourse.json');
+const start =document.getElementById("start")
+start.addEventListener("click", story)
+
+function story(){
+//call all functions here for the seamless story
+console.log("WOW!!!!!!!!")
+}
