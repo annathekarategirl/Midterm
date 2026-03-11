@@ -18,6 +18,10 @@ const textpara= document.getElementById("textdisplay")
 const namepara=document.getElementById("namedisplay")
 const umapara=document.getElementById("uma")
 const storyimg=document.getElementById("storyimg")
+const choicebtn1=document.getElementById("choice1")
+const choicebtn2=document.getElementById("choice2")
+const choicebtn3=document.getElementById("choice3")
+
 
 function getCharacterJPG(characterName)
 {
@@ -59,8 +63,8 @@ next.addEventListener("click",story)
 // const beginning=await main("./beginning.json")
 // console.log(beginning)
 
-order=["./beginning.json","./ofcourse.json"]
-
+order=["./beginning.json","./ofcourse.json","goaway.json"]
+ordernum=0
 async function begin(jsonfile){
 await access(jsonfile)
 textpara.textContent=waitnoactualactualdialogtxt
@@ -73,7 +77,8 @@ storyimg.src=imgtxt
         //dialogNum=0
         //begin("./ofcourse.json")
         next.removeEventListener("click",story)
-        next.addEventListener("click",choice)
+        next.addEventListener("click",function(){choice(order[ordernum])})
+        
         return
     }
 }
@@ -84,8 +89,13 @@ async function choice(jsonfile){
     await access(jsonfile)
     next.addEventListener("click",choice)
     console.log(nametxt)
+    choicescenes=dialogtxt.choice_scenes
     //add choice buttons then event listeners for each choice
     //how to access?
+    choice1=choicescenes[0]
+    choice2=choicescenes[1]
+    console.log(choicescenes)
+    console.log(choicescenes[1])
 }
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 

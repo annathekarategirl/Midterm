@@ -54,8 +54,8 @@
             "Kat": "Hi, I’m Kat. Can I sit next to you two?"
         }
     ],
-    "choice_scenes": {
-        "ofcourse.json": "Of course!",
-        "goaway.json": "Ew. Go away."
-    }
+    "choice_scenes": [
+       {"file": "ofcourse.json","text": "Of course!"},
+        {"file":"goaway.json","text": "Ew. Go away."}
+    ]
 }

@@ -24,8 +24,8 @@
       "Kat": "Would you want to go to Malwart with me?"
     }
   ],
-  "choice_scenes": {
-    "mean_kat.json": "Ew why would I",
-    "nice_kat.json": "Sure!"
-  }
+  "choice_scenes": [
+    {"file":"mean_kat.json","text": "Ew why would I"},
+    {"file": "nice_kat.json","text": "Sure!"}
+  ]
 }
