@@ -13,8 +13,8 @@
       "Beatrice": "Do you like crocheting?"
     }
   ],
-  "choice_scenes": {
-    "nice_bea.json": "Yeah!",
-    "mean_bea.json": "Crocheting is for losers grrrrrr"
-  }
+  "choice_scenes": [
+    {"file":"nice_bea.json","text": "Yeah!"},
+    {"file":"mean_bea.json","text": "Crocheting is for losers grrrrrr"}
+  ]
 }

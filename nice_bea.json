@@ -8,8 +8,8 @@
       "Narration": "You pondered for a second, your heart beating ever so fast."
     }
   ],
-  "choice_scenes": {
-    "bea_confess.json": "Crochet heart and give it to Beatrice",
-    "bea_no_confess.json": "Crochet a star for yourself"
-  }
+  "choice_scenes": [
+    {"file":"bea_confess.json","text": "Crochet heart and give it to Beatrice"},
+    {"file":"bea_no_confess.json","text": "Crochet a star for yourself"}
+  ]
 }

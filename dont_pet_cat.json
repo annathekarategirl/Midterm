@@ -7,8 +7,8 @@
       "Narration": "Pet the cat?"
     }
   ],
-  "choice_scenes": {
-    "pet_cat.json": "Yes",
-    "dont_pet_cat.json": "No"
-  }
+  "choice_scenes": [
+    {"file":"pet_cat.json","text": "Yes"},
+    {"file":"dont_pet_cat.json","text": "No"}
+  ]
 }
