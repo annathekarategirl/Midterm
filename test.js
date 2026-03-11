@@ -39,8 +39,9 @@ async function main(string) {
 // console.log(data)
 const start =document.getElementById("start")
 const next=document.getElementById("next")
+next.disabled=true
 start.addEventListener("click", story)
-start.addEventListener("click",function(){start.disabled = true;})
+start.addEventListener("click",function(){start.disabled = true; next.disabled=false})
 next.addEventListener("click",story)
 
 
