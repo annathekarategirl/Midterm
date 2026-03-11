@@ -13,6 +13,7 @@ function updatedebug(){
 document.getElementById("p1").textContent=current
 console.log(current)
 
+//https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event
 document.addEventListener("keydown", function(keystrokething){
     if(keystrokething.code==="Space"){
         next.click();
@@ -100,7 +101,7 @@ console.log(dialogtxt)
         
     } else {
         if(dialogtxt.choice_scenes){
-            next.onclick=callchoice()
+            next.onclick=callchoice
         }
         else{
         //choice("./beginning.json");
