@@ -230,6 +230,7 @@ function choice3func(){
 // }
 
 function ending(){
+    next.style="display:none"
     switch(jsonchoice){
         case("pet_cat.json"):
             secretinput.style="display:block"
@@ -248,4 +249,12 @@ function ending(){
     
     }
 
+}
+
+const comment=document.getElementById("silly")
+function sillycomments(){
+    arr=["wow i dont care","whats an uma","you won't","whoops indeed"]
+    for (let i=0;i< arr.length; i++){
+        next.addEventListener("click",function(){comment.textContent=arr[i]})
+    }
 }
