@@ -97,10 +97,18 @@ async function choice(jsonfile){
     // console.log(choicescenes)
     // console.log(choice1.file)
     // console.log(choice2.text)
-    choicebtn1.class=""
-    choicebtn2.class=""
+    choicebtn1.style="display:block"
+    choicebtn2.style="display:block"
     choicebtn1.textContent=choice1.text
     choicebtn2.textContent=choice2.text
+    if (jsonfile=="./ofcourse.json"){
+        choicebtn3.style="display:block"
+        choice3=choicescenes[2]
+        choicebtn3.textContent=choice3.text
+        choicebtn3.addEventListener("click",function(){begin(choice3.file)})
+    }
+    choicebtn1.addEventListener("click",function(){begin(choice1.file)})
+    choicebtn2.addEventListener("click",function(){begin(choice2.file)})
 }
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 
