@@ -59,7 +59,7 @@ next.addEventListener("click",story)
 // const beginning=await main("./beginning.json")
 // console.log(beginning)
 
-
+order=["./beginning.json","./ofcourse.json"]
 
 async function begin(jsonfile){
 await access(jsonfile)
@@ -69,9 +69,13 @@ storyimg.src=imgtxt
  if(dialogNum < dialogtxt.dialog.length - 1){
         dialogNum++;
     } else {
-        choice("./beginning.json");
+        //choice("./beginning.json");
+        //dialogNum=0
+        //begin("./ofcourse.json")
+        return
     }
 }
+//FOR LOOP THAT LOOPS BEGIN AND OF COURSE AND SO ON LIST OF THE BEGIN FUNCTION????? JUST A TEsST?????
 
 
 async function choice(jsonfile){
