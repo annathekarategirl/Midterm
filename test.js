@@ -81,6 +81,8 @@ storyimg.src=imgtxt
 async function choice(jsonfile){
     await access(jsonfile)
     console.log(nametxt)
+    //add choice buttons then event listeners for each choice
+    //how to access?
 }
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 
