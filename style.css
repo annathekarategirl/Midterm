@@ -6,3 +6,9 @@ img{
 .hidden{
     display:none
 }
+
+.all{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
