@@ -251,10 +251,16 @@ function ending(){
 
 }
 
-const comment=document.getElementById("silly")
-function sillycomments(){
-    arr=["wow i dont care","whats an uma","you won't","whoops indeed"]
-    for (let i=0;i< arr.length; i++){
-        next.addEventListener("click",function(){comment.textContent=arr[i]})
-    }
+const silly=document.getElementById("silly")
+// function sillycomments(){
+//     arr=["wow i dont care","whats an uma","you won't","whoops indeed"]
+//     for (let i=0;i< arr.length; i++){
+//         next.addEventListener("click",function(){comment.textContent=arr[i]})
+//     }
+// }
+// sillycomments()
+
+while(True){
+    setInterval(function(){silly.src="orange.jpg"},1000)
+    setInterval(function(){silly.src=""},1000);
 }
