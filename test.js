@@ -67,6 +67,7 @@ order=["./beginning.json","./ofcourse.json","goaway.json"]
 ordernum=0
 async function begin(jsonfile){
 await access(jsonfile)
+choicebtn1.style="display:none"
 textpara.textContent=waitnoactualactualdialogtxt
 namepara.textContent=nametxt
 storyimg.src=imgtxt
@@ -107,15 +108,10 @@ async function choice(jsonfile){
         choicebtn3.textContent=choice3.text
         choicebtn3.addEventListener("click",function(){begin(choice3.file)})
     }
-    choicebtn1.addEventListener("click",function(){
+    choicebtn1.addEventListener("click",choice1buttoncall)
 
-        dialogNum=0;
-        begin(choice1.file);
-        choicebtn1.style="display:none";
-        next.removeEventListener(callchoice)
-        next.addEventListener("click",function(){begin(choice1.file)})
-        choicebtn1.removeEventListener("click",function(){})
-    })
+        
+   choicebtn1.removeEventListener("click",choice1buttoncall)}
 
 
     choicebtn2.addEventListener("click",function(){begin(choice2.file)})
@@ -151,14 +147,24 @@ imgtxt=actualdialogtxt.display_image
 // console.log(currentScene)
 async function story(){
 //call all functions here for the seamless story
+//actually nevermind above comment :3c
 await begin("./beginning.json")
 
 // await choice("./beginning.json")
 }
 
 
-
+//stuff for eventlisteners to add and remove
 
 async function callchoice(){
     await choice(order[ordernum])
+}
+
+
+async function choice1buttoncall(){
+dialogNum=0;
+        begin(choice1.file);
+        choicebtn1.style="display:none";
+        next.removeEventListener(callchoice)
+        next.addEventListener("click",function(){begin(choice1.file)})
 }
