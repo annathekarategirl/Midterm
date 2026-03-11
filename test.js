@@ -12,13 +12,24 @@ var current
 function updatedebug(){
 document.getElementById("p1").textContent=current
 console.log(current)
-
+//https://www.freecodecamp.org/news/javascript-keycode-list-keypress-event-key-codes/
 //https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event
 document.addEventListener("keydown", function(keystrokething){
     if(keystrokething.code==="Space"){
         next.click();
     }
 });
+document.addEventListener("keydown", function(keystrokething){
+    if(keystrokething.code==="KeyG"){
+        next.click();
+    }
+});
+document.addEventListener("keydown", function(keystrokething){
+    if(keystrokething.code==="KeyY"){
+        mouseimg.mouseover();
+    }
+});
+
 
 }
 let dialogNum = 0;
@@ -277,3 +288,8 @@ setInterval(function(){
     if(sillyI>=sillyArr.length){
         sillyI= 0}
 }, 700);
+
+const mouseimg =document.getElementById("mouseimg")
+mouseimg.addEventListener("mouseover",function(){mouseimg.src="orange.jpg"})
+mouseimg.addEventListener("mouseleave",function(){mouseimg.src="kokichi.jpg"})
+mouseimg.addEventListener("click",function(){mouseimg.style="display:block"})
