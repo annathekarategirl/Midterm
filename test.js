@@ -114,18 +114,10 @@ async function choice(jsonfile){
         choicebtn3.textContent=choice3.text
         choicebtn3.addEventListener("click",function(){begin(choice3.file)})
     }
-    choicebtn1.addEventListener("click",function(){
+    choicebtn1.addEventListener("click", choice1func)
+    //choicebtn1.removeEventListener("click",choice1func)
 
-        dialogNum=0;
-        begin(choice1.file);
-        choicebtn1.style="display:none";
-        next.removeEventListener(callchoice)
-        next.addEventListener("click",function(){begin(choice1.file)})
-        //choicebtn1.removeEventListener("click",function(){})
-    })
-
-
-    choicebtn2.addEventListener("click",function(){begin(choice2.file)})
+    choicebtn2.addEventListener("click",choice2func)
 }
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 
@@ -169,4 +161,27 @@ await begin("./beginning.json")
 
 async function callchoice(){
     await choice(order[ordernum])
+}
+
+
+function choice1func(){
+
+        dialogNum=0;
+        begin(choice1.file);
+        choicebtn1.style="display:none";
+        next.removeEventListener(callchoice)
+        next.addEventListener("click",function(){begin(choice1.file)})
+        choicebtn1.removeEventListener("click",choice1func)
+        choicebtn1.disabled=true;
+
+    }
+
+function choice2func(){
+    dialogNum=0;
+    choicebtn2.disabled=true;
+    choicebtn2.removeEventListener("click",choice2func)
+    begin(choice2.file)
+    next.addEventListener("click",choice2.file)
+    
+
 }
