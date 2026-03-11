@@ -189,6 +189,7 @@ function choice1func(){
 
 function choice2func(){
     dialogNum=0;
+    jsonchoice=choice2.file
     //choicebtn2.removeEventListener("click",choice2func)
     begin(choice2.file)
     next.addEventListener("click", function(){begin(choice2.file)})
