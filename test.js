@@ -52,7 +52,7 @@ const next=document.getElementById("next")
 next.disabled=true
 start.addEventListener("click", story)
 start.addEventListener("click",function(){start.disabled = true; next.disabled=false})
-next.addEventListener("click",story)
+next.onclick=story()
 
 
 //https://www.w3schools.com/jsref/jsref_promise_then.asp
@@ -86,8 +86,8 @@ console.log(dialogtxt)
         //choice("./beginning.json");
         //dialogNum=0
         //begin("./ofcourse.json")
-        next.removeEventListener("click",story)
-        next.addEventListener("click",callchoice)
+        // next.removeEventListener("click",story)
+        next.onclick=callchoice()
         
         return
     }
@@ -171,36 +171,21 @@ async function callchoice(){
 
 
 function choice1func(){
-
-        // dialogNum=0;
-        // begin(choice1.file);
-        // choicebtn1.style="display:none";
-        // choicebtn2.style="display:none";
-        // next.removeEventListener(callchoice)
-        // next.addEventListener("click",function(){begin(choice1.file)})
-        // choicebtn1.removeEventListener("click",choice1func)
-        // choicebtn1.disabled=true;
-    dialogNum=0;
-    jsonchoice=choice1.file
-    console.log(jsonchoice)
-    //choicebtn2.removeEventListener("click",choice2func)
-    begin(choice1.file)
-    next.addEventListener("click", function(){begin(choice1.file)})
-    choicebtn1.style="display:none";
-    choicebtn2.style="display:none";
-
-
-    }
+    dialogNum = 0;
+    jsonchoice = choice1.file;
+    choicebtn1.style = "display:none";
+    choicebtn2.style = "display:none";
+    next.onclick = function(){ begin(choice1.file) };
+    // removed begin(choice1.file) here
+}
 
 function choice2func(){
-    dialogNum=0;
-    jsonchoice=choice2.file
-    console.log(jsonchoice)
-    //choicebtn2.removeEventListener("click",choice2func)
-    begin(choice2.file)
-    next.addEventListener("click", function(){begin(choice2.file)})
-    choicebtn1.style="display:none";
-    choicebtn2.style="display:none";
+    dialogNum = 0;
+    jsonchoice = choice2.file;
+    choicebtn1.style = "display:none";
+    choicebtn2.style = "display:none";
+    next.onclick = function(){ begin(choice2.file) };
+    // removed begin(choice2.file) here
 }
 
 
