@@ -293,3 +293,9 @@ const mouseimg =document.getElementById("mouseimg")
 mouseimg.addEventListener("mouseover",function(){mouseimg.src="orange.jpg"})
 mouseimg.addEventListener("mouseleave",function(){mouseimg.src="kokichi.jpg"})
 mouseimg.addEventListener("click",function(){mouseimg.style="display:block"})
+
+//https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
+document.getElementById("refresh").addEventListener("click",location.reload())
+
+
+//If it works it works right? :')
