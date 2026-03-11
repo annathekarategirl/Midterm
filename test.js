@@ -99,7 +99,9 @@ console.log(dialogtxt)
         //begin("./ofcourse.json")
         // next.removeEventListener("click",story)
         //next.onclick=callchoice()
-        console.log("test")}
+        console.log("test")
+        ending()
+    }
         return
     }
 }
@@ -221,6 +223,8 @@ function ending(){
     switch(jsonchoice){
         case("pet_cat.json"):
         document.getElementById("secretinput").style="display:block"
+        document.getElementById("submitinput").style="display:block"
+        console.log("it works!")
     }
 
 }
