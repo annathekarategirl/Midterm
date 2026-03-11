@@ -28,6 +28,8 @@ const choicebtn1=document.getElementById("choice1")
 const choicebtn2=document.getElementById("choice2")
 const choicebtn3=document.getElementById("choice3")
 let jsonchoice="beginning.json"
+const submitinput=document.getElementById("submitinput")
+const secretinput=document.getElementById("secretinput")
 
 function getCharacterJPG(characterName)
 {
@@ -222,9 +224,18 @@ function choice3func(){
 function ending(){
     switch(jsonchoice){
         case("pet_cat.json"):
-        document.getElementById("secretinput").style="display:block"
-        document.getElementById("submitinput").style="display:block"
-        console.log("it works!")
+            secretinput.style="display:block"
+            submitinput.style="display:block"
+            console.log("it works!")
+            secretinput.addEventListener("submit",function(){
+                end=secretinput.value
+                umapara.textContent=end
+            
+            })
+            break;
+        case("goaway.json"):
+        umapara.textContent="No one claimed the heart of the single uma. Instead, they claimed each others hearts."
+    
     }
 
 }
