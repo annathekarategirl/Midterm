@@ -176,7 +176,7 @@ function choice1func(){
         // choicebtn1.removeEventListener("click",choice1func)
         // choicebtn1.disabled=true;
     dialogNum=0;
-   
+   ordernum+=1
     //choicebtn2.removeEventListener("click",choice2func)
     begin(choice1.file)
     next.addEventListener("click", function(){begin(choice1.file)})
@@ -188,7 +188,7 @@ function choice1func(){
 
 function choice2func(){
     dialogNum=0;
-    
+    ordernum+=2
     //choicebtn2.removeEventListener("click",choice2func)
     begin(choice2.file)
     next.addEventListener("click", function(){begin(choice2.file)})
