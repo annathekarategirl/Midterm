@@ -8,6 +8,12 @@ async function fetchJSONData(path) {
     const data = await response.json();
     return data;
 }
+var current
+function updatedebug(){
+document.getElementById("p1").textContent=current
+console.log(current)
+
+}
 let dialogNum = 0;
 let dialogtxt
 let nametxt
@@ -88,7 +94,7 @@ storyimg.src=imgtxt
 
 async function choice(jsonfile){
     await access(jsonfile)
-    next.addEventListener("click",choice)
+    //next.addEventListener("click",choice)
     console.log(nametxt)
     choicescenes=dialogtxt.choice_scenes
     //add choice buttons then event listeners for each choice
@@ -126,7 +132,7 @@ async function choice(jsonfile){
 async function access(jsonfile){
 
 dialogtxt = await main(jsonfile);
-
+current=jsonfile
 console.log("dialogNum:", dialogNum);
     console.log("dialog length:", dialogtxt.dialog.length);
     console.log("actualdialogtxt:", dialogtxt.dialog[dialogNum]);
