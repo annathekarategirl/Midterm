@@ -72,14 +72,17 @@ storyimg.src=imgtxt
         //choice("./beginning.json");
         //dialogNum=0
         //begin("./ofcourse.json")
+        next.removeEventListener("click",story)
+        next.addEventListener("click",choice)
         return
     }
 }
 //FOR LOOP THAT LOOPS BEGIN AND OF COURSE AND SO ON LIST OF THE BEGIN FUNCTION????? JUST A TEsST?????
-
+//CHOICE IF ELSE CALLS BEGIN FUNC ON DIFFERENTTHING BUT HOW TO DO SPECIFICS MAYBE LIKE IF jsonfile IS beggining then these buttons mean this and yeah
 
 async function choice(jsonfile){
     await access(jsonfile)
+    next.addEventListener("click",choice)
     console.log(nametxt)
     //add choice buttons then event listeners for each choice
     //how to access?
