@@ -276,4 +276,4 @@ setInterval(function(){
     sillyI++;
     if(sillyI>=sillyArr.length){
         sillyI= 0}
-}, 500);
+}, 700);
