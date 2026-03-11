@@ -2,14 +2,47 @@
   "dialog": [
     {
       "display_image": "bea.jpg",
-      "Beatrice": "Awesome! Let's crochet then!"
+      "Beatrice": "Wow! What are you making?"
     },
     {
-      "Narration": "You pondered for a second, your heart beating ever so fast."
+      "Narration": "Your heart jumps as you gather the courage to tell her."
+    },
+    {
+      "display_image":"specialweek.jpg",
+      "Special Week":"It's a... heart. For... you."
+    },
+    {
+      "display_image":"bea.jpg",
+      "Beatrice":"Ooh! Awesome!"
+    },
+    {
+      "display_image":"specialweek.jpg",
+      "Special Week":"Y-yeah. Um... hey Beatrice?"
+    },
+    {
+      "display_image":"bea.jpg",
+      "Beatrice":"Yeah?"
+    },
+    {
+      "display_image":"specialweek.jpg",
+      "Special Week":"I made this heart because I like you. But... not just like you but I like like you"
+    },
+    {"display_image":"bea.jpg",
+    "Beatrice":"💀💀💀💀💀"},
+    {
+      "display_image":"specialweek.jpg",
+      "Special Week":"Would you.... give me a chance"
+    },
+    {
+      "display_image":"bea.jpg",
+      "Beatrice":"Yes queen"
+    },
+    {
+      "display_image":"specialweek.jpg",
+      "Special Week":"Yay!!!"
+    },
+    {
+      "Narration":"And they lived happily ever after the end"
     }
-  ],
-  "choice_scenes": [
-    {"file":"bea_confess.json","text": "Crochet heart and give it to Beatrice"},
-    {"file":"bea_no_confess.json","text": "Crochet a star for yourself"}
   ]
 }
