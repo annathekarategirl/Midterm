@@ -50,9 +50,15 @@ async function main(string) {
 const start =document.getElementById("start")
 const next=document.getElementById("next")
 next.disabled=true
-start.addEventListener("click", story)
-start.addEventListener("click",function(){start.disabled = true; next.disabled=false})
-next.onclick=story()
+// start.addEventListener("click", story)
+// start.addEventListener("click",function(){start.disabled = true; next.disabled=false})
+// next.onclick=story()
+start.addEventListener("click", function(){
+    start.disabled = true;
+    next.disabled = false;
+    next.onclick = function(){ begin("./beginning.json") };
+    begin("./beginning.json"); // show first line immediately on start
+});
 
 
 //https://www.w3schools.com/jsref/jsref_promise_then.asp
