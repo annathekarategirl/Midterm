@@ -13,6 +13,12 @@ function updatedebug(){
 document.getElementById("p1").textContent=current
 console.log(current)
 
+document.addEventListener("keydown", function(keystrokething){
+    if(keystrokething.code==="Space"){
+        next.click();
+    }
+});
+
 }
 let dialogNum = 0;
 let dialogtxt
@@ -57,6 +63,7 @@ next.disabled=true
 // next.onclick=story()
 start.addEventListener("click", function(){
     start.disabled = true;
+    start.style="display:none"
     next.disabled = false;
     next.onclick = function(){ begin("./beginning.json") };
     begin("./beginning.json"); // show first line immediately on start

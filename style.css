@@ -7,8 +7,15 @@ img{
     display:none
 }
 
-.all{
+/* .all{
     display: block;
     margin-left: auto;
     margin-right: auto;
+} */
+
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
