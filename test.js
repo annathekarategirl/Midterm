@@ -260,18 +260,20 @@ const silly=document.getElementById("silly")
 // }
 // sillycomments()
 
-let sillyArr=["orange.jpg", ""]
-let sillyI=0
 
+let sillyArr=[];
+//https://www.geeksforgeeks.org/javascript/add-elements-to-a-javascript-array/
+for(let i= 0;i<2;i++){
+    if(i== 0){
+        sillyArr.push("orange.jpg");
+    }else {
+        sillyArr.push("")}
+}
+
+let sillyI = 0;
 setInterval(function(){
-    sillyI = 0
-    for(sillyI= 0; sillyI < sillyArr.length; sillyI++){
-        if(silly.src ==sillyArr[0]){
-            silly.src= sillyArr[1]
-            break;
-        } else {
-            silly.src =sillyArr[0]
-            break;
-        }
-    }
+    silly.src=sillyArr[sillyI];
+    sillyI++;
+    if(sillyI>=sillyArr.length){
+        sillyI= 0}
 }, 500);
