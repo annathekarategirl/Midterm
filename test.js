@@ -79,6 +79,7 @@ textpara.textContent=waitnoactualactualdialogtxt
 namepara.textContent=nametxt
 storyimg.src=imgtxt
 console.log(jsonchoice)
+console.log(dialogtxt)
  if(dialogNum < dialogtxt.dialog.length - 1){
         dialogNum++;
     } else {
