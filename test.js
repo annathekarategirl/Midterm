@@ -88,13 +88,18 @@ console.log(jsonchoice)
 console.log(dialogtxt)
  if(dialogNum < dialogtxt.dialog.length - 1){
         dialogNum++;
+        
     } else {
+        if(dialogtxt.choice_scenes){
+            next.onclick=callchoice()
+        }
+        else{
         //choice("./beginning.json");
         //dialogNum=0
         //begin("./ofcourse.json")
         // next.removeEventListener("click",story)
-        next.onclick=callchoice()
-        
+        //next.onclick=callchoice()
+        console.log("test")}
         return
     }
 }
@@ -118,11 +123,12 @@ async function choice(jsonfile){
     choicebtn1.textContent=choice1.text
     choicebtn2.textContent=choice2.text
     console.log(jsonchoice)
-    if (jsonfile=="./ofcourse.json"){
+    if (jsonfile=="ofcourse.json"){
         choicebtn3.style="display:block"
         choice3=choicescenes[2]
+        console.log(choice3)
         choicebtn3.textContent=choice3.text
-        choicebtn3.addEventListener("click",function(){begin(choice3.file)})
+        choicebtn3.addEventListener("click",choice3func)
     }
     choicebtn1.addEventListener("click", choice1func)
     //choicebtn1.removeEventListener("click",choice1func)
@@ -180,7 +186,8 @@ function choice1func(){
     dialogNum = 0;
     jsonchoice = choice1.file;
     choicebtn1.style = "display:none";
-    choicebtn2.style = "display:none";
+    choicebtn2.style ="display:none";
+    choicebtn3.style="display:none";
     next.onclick = function(){ begin(choice1.file) };
     // removed begin(choice1.file) here
 }
@@ -188,9 +195,20 @@ function choice1func(){
 function choice2func(){
     dialogNum = 0;
     jsonchoice = choice2.file;
+    choicebtn1.style= "display:none";
+    choicebtn2.style ="display:none";
+    choicebtn3.style="display:none";
+    next.onclick = function(){ begin(choice2.file) };
+    // removed begin(choice2.file) here
+}
+
+function choice3func(){
+    dialogNum = 0;
+    jsonchoice = choice3.file;
     choicebtn1.style = "display:none";
     choicebtn2.style = "display:none";
-    next.onclick = function(){ begin(choice2.file) };
+    choicebtn3.style="display:none";
+    next.onclick = function(){ begin(choice3.file) };
     // removed begin(choice2.file) here
 }
 
@@ -198,3 +216,11 @@ function choice2func(){
 // function checkordernum(){
 // switch(){}
 // }
+
+function ending(){
+    switch(jsonchoice){
+        case("pet_cat.json"):
+        document.getElementById("secretinput").style="display:block"
+    }
+
+}
