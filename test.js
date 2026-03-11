@@ -260,7 +260,18 @@ const silly=document.getElementById("silly")
 // }
 // sillycomments()
 
-while(True){
-    setInterval(function(){silly.src="orange.jpg"},1000)
-    setInterval(function(){silly.src=""},1000);
-}
+let sillyArr=["orange.jpg", ""]
+let sillyI=0
+
+setInterval(function(){
+    sillyI = 0
+    for(sillyI= 0; sillyI < sillyArr.length; sillyI++){
+        if(silly.src ==sillyArr[0]){
+            silly.src= sillyArr[1]
+            break;
+        } else {
+            silly.src =sillyArr[0]
+            break;
+        }
+    }
+}, 500);
