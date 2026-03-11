@@ -27,7 +27,7 @@ const storyimg=document.getElementById("storyimg")
 const choicebtn1=document.getElementById("choice1")
 const choicebtn2=document.getElementById("choice2")
 const choicebtn3=document.getElementById("choice3")
-
+let jsonchoice
 
 function getCharacterJPG(characterName)
 {
@@ -69,7 +69,7 @@ next.addEventListener("click",story)
 // const beginning=await main("./beginning.json")
 // console.log(beginning)
 
-order=["./beginning.json","./ofcourse.json","goaway.json"]
+order=["./beginning.json","./ofcourse.json","goaway.json","kat_lunch.json","bea_lunch.json","alone_lunch.json"]
 ordernum=0
 async function begin(jsonfile){
 await access(jsonfile)
@@ -161,7 +161,8 @@ await begin("./beginning.json")
 //stuff for eventlisteners to add and remove
 
 async function callchoice(){
-    await choice(order[ordernum])
+    //await choice(order[ordernum])
+    await choice(jsonchoice)
 }
 
 
@@ -176,7 +177,7 @@ function choice1func(){
         // choicebtn1.removeEventListener("click",choice1func)
         // choicebtn1.disabled=true;
     dialogNum=0;
-   ordernum+=1
+    jsonchoice=choice1.file
     //choicebtn2.removeEventListener("click",choice2func)
     begin(choice1.file)
     next.addEventListener("click", function(){begin(choice1.file)})
@@ -188,10 +189,14 @@ function choice1func(){
 
 function choice2func(){
     dialogNum=0;
-    ordernum+=2
     //choicebtn2.removeEventListener("click",choice2func)
     begin(choice2.file)
     next.addEventListener("click", function(){begin(choice2.file)})
     choicebtn1.style="display:none";
     choicebtn2.style="display:none";
+}
+
+
+function checkordernum(){
+switch()
 }
