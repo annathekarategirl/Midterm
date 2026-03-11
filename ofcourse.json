@@ -26,9 +26,9 @@
       "Narration": "Oooh. Looks like you'll have to choose."
     }
   ],
-  "choice_scenes": {
-    "kat_lunch.json": "Go with Kat",
-    "bea_lunch.json": "Go with Beatrice",
-    "alone_lunch.json": "Eat lunch alone"
-  }
+  "choice_scenes": [
+    {"file":"kat_lunch.json","text": "Go with Kat"},
+    {"file":"bea_lunch.json","text": "Go with Beatrice"},
+    {"file":"alone_lunch.json","text": "Eat lunch alone"}
+  ]
 }
