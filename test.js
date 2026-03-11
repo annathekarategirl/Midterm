@@ -94,8 +94,13 @@ async function choice(jsonfile){
     //how to access?
     choice1=choicescenes[0]
     choice2=choicescenes[1]
-    console.log(choicescenes)
-    console.log(choicescenes[1])
+    // console.log(choicescenes)
+    // console.log(choice1.file)
+    // console.log(choice2.text)
+    choicebtn1.class=""
+    choicebtn2.class=""
+    choicebtn1.textContent=choice1.text
+    choicebtn2.textContent=choice2.text
 }
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 
