@@ -41,3 +41,13 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h1 img {
+    height: 1em;
+}
