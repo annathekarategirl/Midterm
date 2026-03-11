@@ -227,10 +227,12 @@ function ending(){
             secretinput.style="display:block"
             submitinput.style="display:block"
             console.log("it works!")
-            secretinput.addEventListener("submit",function(){
+            submitinput.addEventListener("click",function(){
                 end=secretinput.value
-                umapara.textContent=end
-            
+                umapara.textContent="ENDING: "+end
+                //storyimg.style="width:200;height:200"
+                storyimg.src="orange.jpg"
+                
             })
             break;
         case("goaway.json"):
