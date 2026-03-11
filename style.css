@@ -37,5 +37,7 @@ img{
 }
 
 body{
-    background-image: "wecib.jpg";
+    background-image: url("wecib.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
