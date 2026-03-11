@@ -77,7 +77,7 @@ storyimg.src=imgtxt
         //dialogNum=0
         //begin("./ofcourse.json")
         next.removeEventListener("click",story)
-        next.addEventListener("click",function(){choice(order[ordernum])})
+        next.addEventListener("click",callchoice)
         
         return
     }
@@ -107,7 +107,17 @@ async function choice(jsonfile){
         choicebtn3.textContent=choice3.text
         choicebtn3.addEventListener("click",function(){begin(choice3.file)})
     }
-    choicebtn1.addEventListener("click",function(){begin(choice1.file)})
+    choicebtn1.addEventListener("click",function(){
+
+        dialogNum=0;
+        begin(choice1.file);
+        choicebtn1.style="display:none";
+        next.removeEventListener(callchoice)
+        next.addEventListener("click",function(){begin(choice1.file)})
+        choicebtn1.removeEventListener("click",function(){})
+    })
+
+
     choicebtn2.addEventListener("click",function(){begin(choice2.file)})
 }
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
@@ -144,4 +154,11 @@ async function story(){
 await begin("./beginning.json")
 
 // await choice("./beginning.json")
+}
+
+
+
+
+async function callchoice(){
+    await choice(order[ordernum])
 }
