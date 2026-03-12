@@ -33,11 +33,11 @@ document.addEventListener("keydown", function(keystrokething){
 
 }
 let dialogNum = 0;
-let dialogtxt
+let jsonobject
 let nametxt
 let imgtxt
-let actualdialogtxt;
-let waitnoactualactualdialogtxt;
+let actualjsonobject;
+let waitnoactualactualjsonobject;
 const textpara= document.getElementById("textdisplay")
 const namepara=document.getElementById("namedisplay")
 const umapara=document.getElementById("uma")
@@ -102,16 +102,16 @@ async function begin(jsonfile){
 await access(jsonfile)
 choicebtn1.style="display:none"
 choicebtn2.style="display:none"
-textpara.textContent=waitnoactualactualdialogtxt
+textpara.textContent=waitnoactualactualjsonobject
 namepara.textContent=nametxt
 storyimg.src=imgtxt
 console.log(jsonchoice)
-console.log(dialogtxt)
- if(dialogNum < dialogtxt.dialog.length - 1){
+console.log(jsonobject)
+ if(dialogNum < jsonobject.dialog.length - 1){
         dialogNum++;
         
     } else {
-        if(dialogtxt.choice_scenes){
+        if(jsonobject.choice_scenes){
             next.onclick=callchoice
         }
         else{
@@ -133,7 +133,7 @@ async function choice(jsonfile){
     await access(jsonfile)
     //next.addEventListener("click",choice)
     console.log(nametxt)
-    choicescenes=dialogtxt.choice_scenes
+    choicescenes=jsonobject.choice_scenes
     //add choice buttons then event listeners for each choice
     //how to access?
     choice1=choicescenes[0]
@@ -162,27 +162,27 @@ async function choice(jsonfile){
 
 async function access(jsonfile){
 
-dialogtxt = await main(jsonfile);
+jsonobject = await main(jsonfile);
 current=jsonfile
 console.log("dialogNum:", dialogNum);
-    console.log("dialog length:", dialogtxt.dialog.length);
-    console.log("actualdialogtxt:", dialogtxt.dialog[dialogNum]);
+    console.log("dialog length:", jsonobject.dialog.length);
+    console.log("actualjsonobject:", jsonobject.dialog[dialogNum]);
 
 
-actualdialogtxt=dialogtxt.dialog[dialogNum]
+actualjsonobject=jsonobject.dialog[dialogNum]
 
-if(!actualdialogtxt){
+if(!actualjsonobject){
         console.log("out of bounds, stopping");
         return;}
 
 
 
-nametxt = Object.keys(actualdialogtxt).find(key => key !== "display_image");
-waitnoactualactualdialogtxt=actualdialogtxt[nametxt]
-imgtxt=actualdialogtxt.display_image
+nametxt = Object.keys(actualjsonobject).find(key => key !== "display_image");
+waitnoactualactualjsonobject=actualjsonobject[nametxt]
+imgtxt=actualjsonobject.display_image
 
 
-//console.log(Object.keys(dialogtxt['dialog'][dialogNum]))
+//console.log(Object.keys(jsonobject['dialog'][dialogNum]))
 }
 
 
