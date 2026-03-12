@@ -257,7 +257,26 @@ function ending(){
             break;
         case("goaway.json"):
         umapara.textContent="No one claimed the heart of the single uma. Instead, they claimed each others hearts."
-    
+        break;
+        case("bea_confess.json"):
+        umapara.textContent="Beatrice claimed the heart of the single uma!"
+        break;
+        case("bea_no_confess.json"):
+        umapara.textContent="No one claimed the heart of the single uma"
+        break;
+        case("kat_confess.json"):
+        umapara.textContent="Kat claimed the heart of the single uma!"
+        break;
+        case("kat_friends.json"):
+        umapara.textContent="No one claimed the heart of the single uma"
+        break;
+        case("mean_bea.json"):
+        umapara.textContent="You are so mean bro stopp"
+        break;
+        case("mean_kat.json"):
+        umapara.textContent="It gets to a point dawg"
+        break;
+        
     }
     arblink.textContent="\nYou unlocked arbitrary button land!!!"
 }
