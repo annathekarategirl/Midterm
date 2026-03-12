@@ -8,10 +8,13 @@ async function fetchJSONData(path) {
     const data = await response.json();
     return data;
 }
+//
 var current
 function updatedebug(){
 document.getElementById("p1").textContent=current
 console.log(current)
+
+}
 //https://www.freecodecamp.org/news/javascript-keycode-list-keypress-event-key-codes/
 //https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event
 document.addEventListener("keydown", function(keystrokething){
@@ -30,8 +33,6 @@ document.addEventListener("keydown", function(keystrokething){
     }
 });
 
-
-}
 let dialogNum = 0;
 let jsonobject
 let nametxt
