@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
-    
+    <button id="clickme">Button!!!!!!!!!!!!!!</button>
+    <p id="p"></p>
+    <button id="return">go back</button>
+    <p id="p23"></p><a id="goback" href="index.html"></a>
+    <script defer>
+        document.getElementById("clickme").addEventListener("click",function(){document.getElementById("p").textContent="Wow you really just gonna let them click you like that"})
+        document.getElementById("clickme").addEventListener("dblclick",function(){document.getElementById("p").textContent="STop It"})
+
+        document.getElementById("return").addEventListener("mouseover",function(){document.getElementById("goback").textContent="go back :3"})
+        document.getElementById("return").addEventListener("mouseout",function(){document.getElementById("goback").textContent=""})
+        document.getElementById("return").addEventListener("click",function(){document.getElementById("p23").textContent="hah"})
+    </script>
 </body>
 </html>
