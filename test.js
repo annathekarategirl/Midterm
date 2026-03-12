@@ -36,8 +36,8 @@ let dialogNum = 0;
 let jsonobject
 let nametxt
 let imgtxt
-let actualjsonobject;
-let waitnoactualactualjsonobject;
+let dialogindex;
+let currentdialog;
 const textpara= document.getElementById("textdisplay")
 const namepara=document.getElementById("namedisplay")
 const umapara=document.getElementById("uma")
@@ -102,7 +102,7 @@ async function begin(jsonfile){
 await access(jsonfile)
 choicebtn1.style="display:none"
 choicebtn2.style="display:none"
-textpara.textContent=waitnoactualactualjsonobject
+textpara.textContent=currentdialog
 namepara.textContent=nametxt
 storyimg.src=imgtxt
 console.log(jsonchoice)
@@ -166,20 +166,20 @@ jsonobject = await main(jsonfile);
 current=jsonfile
 console.log("dialogNum:", dialogNum);
     console.log("dialog length:", jsonobject.dialog.length);
-    console.log("actualjsonobject:", jsonobject.dialog[dialogNum]);
+    console.log("dialogindex:", jsonobject.dialog[dialogNum]);
 
 
-actualjsonobject=jsonobject.dialog[dialogNum]
+dialogindex=jsonobject.dialog[dialogNum]
 
-if(!actualjsonobject){
+if(!dialogindex){
         console.log("out of bounds, stopping");
         return;}
 
 
 
-nametxt = Object.keys(actualjsonobject).find(key => key !== "display_image");
-waitnoactualactualjsonobject=actualjsonobject[nametxt]
-imgtxt=actualjsonobject.display_image
+nametxt = Object.keys(dialogindex).find(key => key !== "display_image");
+currentdialog=dialogindex[nametxt]
+imgtxt=dialogindex.display_image
 
 
 //console.log(Object.keys(jsonobject['dialog'][dialogNum]))
@@ -239,7 +239,7 @@ function choice3func(){
 // function checkordernum(){
 // switch(){}
 // }
-
+const arblink=document.getElementById("arbitrary")
 function ending(){
     next.style="display:none"
     switch(jsonchoice){
@@ -259,7 +259,7 @@ function ending(){
         umapara.textContent="No one claimed the heart of the single uma. Instead, they claimed each others hearts."
     
     }
-
+    arblink.textContent="\nYou unlocked arbitrary button land!!!"
 }
 
 const silly=document.getElementById("silly")
