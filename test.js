@@ -130,7 +130,12 @@ console.log(jsonobject)
 //CHOICE IF ELSE CALLS BEGIN FUNC ON DIFFERENTTHING BUT HOW TO DO SPECIFICS MAYBE LIKE IF jsonfile IS beggining then these buttons mean this and yeah
 
 async function choice(jsonfile){
-    await access(jsonfile)
+    try{
+    await access(jsonfile)}
+    catch(error){
+        umapara.textContent="json file not found"
+        console.log("file not found")
+    }
     //next.addEventListener("click",choice)
     console.log(nametxt)
     choicescenes=jsonobject.choice_scenes
@@ -276,7 +281,7 @@ function ending(){
         case("mean_kat.json"):
         umapara.textContent="It gets to a point dawg"
         break;
-        
+
     }
     arblink.textContent="\nYou unlocked arbitrary button land!!!"
 }
