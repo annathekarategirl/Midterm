@@ -8,10 +8,10 @@ async function fetchJSONData(path) {
     const data = await response.json();
     return data;
 }
-
+//debugging stuff
 var current
 function updatedebug(){
-document.getElementById("p1").textContent=current
+//document.getElementById("p1").textContent=current
 console.log(current)
 
 }
@@ -33,6 +33,7 @@ document.addEventListener("keydown", function(keystrokething){
     }
 });
 
+//initializations
 let dialogNum = 0;
 let jsonobject
 let nametxt
@@ -50,13 +51,7 @@ let jsonchoice="beginning.json"
 const submitinput=document.getElementById("submitinput")
 const secretinput=document.getElementById("secretinput")
 
-function getCharacterJPG(characterName)
-{
-    switch(characterName){
-        case "Special Week":
-            return "specialweek.jpg"
-    }
-}
+
 var data=""
 async function main(string) {
     data = await fetchJSONData(string);
@@ -88,7 +83,8 @@ namepara.textContent=nametxt
 storyimg.src=imgtxt
 console.log(jsonchoice)
 console.log(jsonobject)
- if(dialogNum < jsonobject.dialog.length - 1){
+    //prevent index out of range and transititions into choices
+ if(dialogNum<jsonobject.dialog.length-1){
         dialogNum++;
         
     } else {
@@ -147,6 +143,7 @@ console.log("dialogNum:", dialogNum);
 
 dialogindex=jsonobject.dialog[dialogNum]
 
+//console debugging stuff
 if(!dialogindex){
         console.log("out of bounds, stopping");
         return;}
@@ -160,14 +157,14 @@ imgtxt=dialogindex.display_image
 }
 
 
-
+//begins story
 async function story(){
 await begin("./beginning.json")
 
 }
 
 
-//stuff for eventlisteners to add and remove
+//determines action of choices
 
 async function callchoice(){
     console.log(jsonchoice)
@@ -176,21 +173,21 @@ async function callchoice(){
 
 
 function choice1func(){
-    dialogNum = 0;
-    jsonchoice = choice1.file;
-    choicebtn1.style = "display:none";
-    choicebtn2.style ="display:none";
-    choicebtn3.style="display:none";
-    next.onclick = function(){ begin(choice1.file) };
-}
-
-function choice2func(){
-    dialogNum = 0;
-    jsonchoice = choice2.file;
+    dialogNum= 0;
+    jsonchoice= choice1.file;
     choicebtn1.style= "display:none";
     choicebtn2.style ="display:none";
     choicebtn3.style="display:none";
-    next.onclick = function(){ begin(choice2.file) };
+    next.onclick = function(){begin(choice1.file)};
+}
+
+function choice2func(){
+    dialogNum=0;
+    jsonchoice=choice2.file;
+    choicebtn1.style= "display:none";
+    choicebtn2.style ="display:none";
+    choicebtn3.style="display:none";
+    next.onclick =function(){begin(choice2.file)};
    
 }
 
@@ -200,8 +197,9 @@ function choice3func(){
     choicebtn1.style = "display:none";
     choicebtn2.style = "display:none";
     choicebtn3.style="display:none";
-    next.onclick = function(){ begin(choice3.file) };}
+    next.onclick = function(){begin(choice3.file)};}
 
+//determines ending
 const arblink=document.getElementById("arbitrary")
 function ending(){
     next.style="display:none"
@@ -246,7 +244,7 @@ function ending(){
 const silly=document.getElementById("silly")
 
 
-
+//blinking cat
 let sillyArr=[];
 //https://www.geeksforgeeks.org/javascript/add-elements-to-a-javascript-array/
 for(let i= 0;i<2;i++){
@@ -271,6 +269,5 @@ mouseimg.addEventListener("click",function(){mouseimg.style="display:block"})
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
 document.getElementById("refresh").addEventListener("click",function(){location.reload()})
+//restart button
 
-
-//If it works it works right? :')
